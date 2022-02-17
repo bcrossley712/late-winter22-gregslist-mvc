@@ -9,6 +9,12 @@ class JobService {
     // console.log(newJob);
     ProxyState.jobs = [newJob, ...ProxyState.jobs]
   }
+
+  deleteJob(jobId) {
+    let jobIndex = ProxyState.jobs.findIndex(j => jobId == j.id)
+    ProxyState.jobs.splice(jobIndex, 1)
+    ProxyState.jobs = ProxyState.jobs
+  }
 }
 
 export const jobService = new JobService

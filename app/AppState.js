@@ -12,7 +12,7 @@ const testCar = new Car(
     price: 5600,
     description: 'its cool.',
     color: '#FFFFFF',
-    imgUrl: 'https://thiscatdoesnotexist.com'
+    imgUrl: 'https://www.autodetective.com/uploads/photos/gmc/sierra%201500/2018/1665524.jpg'
   })
 
 const testHouse = new House({
@@ -22,15 +22,15 @@ const testHouse = new House({
   bathrooms: 3,
   acreage: 1.2,
   description: 'Victorian wonder!',
-  imgUrl: 'https://thiscatdoesnotexist.com'
+  imgUrl: 'http://classifieds.craigclassifiedads.com/images/2014/07/22/316691/5-bedroom-3-bath-home_1.jpg'
 })
 
 const testJob = new Job({
-  logoUrl: 'https://thiscatdoesnotexist.com',
+  logoUrl: 'https://cdn.dribbble.com/users/153055/screenshots/9528745/media/866c93a9d71a30fce2b49abeb0361545.jpg',
   hiringCompany: 'Cats-R-Us',
   location: 'Boise, Idaho',
   title: `Jeremy's assistant`,
-  description: 'Helps Jeremy manage his cats',
+  description: 'Help Jeremy manage his cats!',
   salary: 500
 })
 

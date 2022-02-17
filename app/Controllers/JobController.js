@@ -1,4 +1,5 @@
 import { ProxyState } from "../AppState.js";
+import { getJobForm } from "../Components/JobForm.js";
 import { jobService } from "../Services/JobService.js";
 
 function _draw() {
@@ -11,7 +12,11 @@ export class JobController {
   constructor() {
     // console.log('jobcontroller connected');
     ProxyState.on('jobs', _draw)
+  }
+
+  showJobs() {
     _draw()
+    document.getElementById('modal-body-slot').innerHTML = getJobForm()
   }
 
   addJob(event) {
@@ -27,6 +32,13 @@ export class JobController {
     }
     // console.log(submittedJob);
     jobService.addJob(submittedJob)
+    form.clear()
+    bootstrap.Modal.getOrCreateInstance(modal).hide()
   }
+
+  deleteJob(jobId) {
+    jobService.deleteJob(jobId)
+  }
+
 
 }

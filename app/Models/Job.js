@@ -24,6 +24,7 @@ export class Job {
             <p>${this.description}</p>
             <p>$${this.salary} annually</p>
           </div>
+          <button class="btn btn-outline-danger m-1" onclick="app.jobController.deleteJob('${this.id}')">Delete</button>
         </div>
       </div>
     `
